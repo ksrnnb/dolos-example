@@ -1,4 +1,4 @@
-import { File, FingerprintIndex, TokenizedFile } from "@dodona/dolos-lib";
+import { File, FingerprintIndex, Options, TokenizedFile } from "@dodona/dolos-lib";
 import { ProgrammingLanguage } from "../node_modules/@dodona/dolos-lib/dist/lib/language.js";
 
 type Runtime = "cpp" | "python";
@@ -8,10 +8,7 @@ type Code = {
   runtime: Runtime;
 };
 
-const defaultKgramLength = 23;
-const defaultKgramsInWindow = 17;
-
-const index = new FingerprintIndex(defaultKgramLength, defaultKgramsInWindow);
+const index = new FingerprintIndex(Options.defaultKgramLength, Options.defaultKgramsInWindow);
 
 // Problem Sample: https://leetcode.com/problems/fizz-buzz/
 const codes: Code[] = [
