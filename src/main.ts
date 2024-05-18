@@ -90,6 +90,7 @@ index.addFiles(tokenizedFiles);
 const pair12 = index.getPair(tokenizedFiles[0], tokenizedFiles[1]);
 const fragments12 = pair12.buildFragments();
 console.log({
+  pair: "solution_1 and solution_2",
   similarity: pair12.similarity,
   left: fragments12[0].leftSelection,
   right: fragments12[0].rightSelection,
@@ -99,6 +100,7 @@ console.log({
 const pair13 = index.getPair(tokenizedFiles[0], tokenizedFiles[2]);
 const fragments13 = pair13.buildFragments();
 console.log({
+  pair: "solution_1 and solution_3",
   similarity: pair13.similarity,
   left: fragments13[0].leftSelection,
   right: fragments13[0].rightSelection,
